@@ -38,7 +38,7 @@ export class DioAccount {
     if (this.validateStatus()) {
       console.log("Valor de conta R$:", this.balance);
 
-      this.setValueDeposit(10);
+      this.setValueDeposit(20);
 
       this.getDepoist();
 
@@ -80,16 +80,18 @@ export class DioAccount {
   };
 
   getWithdraw = (): number => {
-    console.log("Valor Sacado:", this.valueWithdraw);
 
     return this.valueWithdraw;
   };
 
-  getBalance = (): void => {
-    console.log(this.balance);
+  public getBalance = (): number=> {
+
+
+    return this.balance
+
   };
 
-  private validateStatus = (): boolean => {
+  public validateStatus = (): boolean => {
     if (this.status) {
       return this.status;
     }
